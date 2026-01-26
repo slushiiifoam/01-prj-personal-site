@@ -1,1 +1,316 @@
-/* Add you CSS here */
+/* ===== RESET & GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #faf8f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, #fff5f9 0%, #faf8f6 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #FFDEF8;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-size: 3em;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.3em;
+  color: #d4868c;
+  letter-spacing: 1px;
+}
+
+/* ===== VERTICAL DIVIDER LINES ===== */
+.divider {
+  width: 2px;
+  height: 60px;
+  background-color: #E8AFBC;
+  margin: 40px auto;
+}
+
+/* ===== SECTION COMMON STYLES ===== */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2.2em;
+  color: #2d2d2d;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* Underline for section titles */
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #FFDEF8;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+  background-color: #fff5f9;
+  border-radius: 15px; /* Smooth corners */
+  box-shadow: 0 0 15px rgba(255, 222, 248, 0.5); /* Glow effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.about:hover {
+  box-shadow: 0 0 25px rgba(255, 222, 248, 0.8); /* Enhanced glow on hover */
+}
+
+.about p {
+  font-size: 1.1em;
+  text-align: center;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills {
+  border-radius: 15px; /* Smooth corners */
+  box-shadow: 0 0 15px rgba(255, 222, 248, 0.5); /* Glow effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.skills:hover {
+  box-shadow: 0 0 25px rgba(255, 222, 248, 0.8); /* Enhanced glow on hover */
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skill-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.skill-item i {
+  font-size: 3em; /* Size of the icon */
+  margin-bottom: 10px; /* Space below the icon */
+  display: block; /* Block display for proper alignment */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.skill-item i:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+.skill-item p {
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects {
+  border-radius: 15px; /* Smooth corners */
+  box-shadow: 0 0 15px rgba(255, 222, 248, 0.5); /* Glow effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.projects:hover {
+  box-shadow: 0 0 25px rgba(255, 222, 248, 0.8); /* Enhanced glow on hover */
+}
+
+.projects {
+  background-color: #fff5f9;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(255, 222, 248, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  padding: 15px 15px 10px;
+  color: #2d2d2d;
+  font-size: 1.2em;
+}
+
+.project-card p {
+  padding: 0 15px 15px;
+  color: #666;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* ===== SONGS SECTION ===== */
+.songs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.song-card {
+  text-align: center;
+  width: 160px;
+}
+
+.song-card img {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #FFDEF8;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.song-card img:hover {
+  transform: scale(1.05);
+}
+
+.song-card h4 {
+  color: #2d2d2d;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.song-card p {
+  color: #d4868c;
+  font-size: 0.9em;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+  background-color: #fff5f9;
+  text-align: center;
+  border-radius: 15px; /* Smooth corners */
+  box-shadow: 0 0 15px rgba(255, 222, 248, 0.5); /* Glow effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.contact:hover {
+  box-shadow: 0 0 25px rgba(255, 222, 248, 0.8); /* Enhanced glow on hover */
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.contact-links a {
+  display: inline-block;
+  font-size: 3em;
+  color: #d4868c;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #FFDEF8;
+  transform: scale(1.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #2d2d2d;
+  color: #fff5f9;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 0.95em;
+}
+
+footer i {
+  margin-right: 5px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  section h2 {
+    font-size: 1.8em;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .contact-links {
+    gap: 30px;
+  }
+
+  .contact-links a {
+    font-size: 2.5em;
+  }
+}
