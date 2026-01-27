@@ -7,7 +7,14 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #faf8f6;
+  /* Use linear-gradient for overlay, then the image behind it */
+  background: 
+    linear-gradient(rgba(250, 248, 246, 0.85), rgba(250, 248, 246, 0.85)), /* Color overlay on top */
+    url('img/background2.jpeg');    /* Background image underneath */
+  background-size: cover;           /* Cover the entire viewport */
+  background-position: center;      /* Center the image */
+  background-repeat: no-repeat;     /* Don't repeat the image */
+  background-attachment: fixed;     /* Image stays fixed while content scrolls */
   color: #333;
   line-height: 1.6;
 }
