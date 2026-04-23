@@ -17,6 +17,12 @@ body {
   background-attachment: fixed;     /* Image stays fixed while content scrolls */
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ===== HERO SECTION ===== */
@@ -182,6 +188,10 @@ section h2::after {
   border-radius: 8px;
   overflow: hidden;
   width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   box-shadow: 0 4px 12px rgba(255, 222, 248, 0.3);
   transition: transform 0.3s ease;
 }
@@ -208,6 +218,26 @@ section h2::after {
   color: #666;
   font-size: 0.95em;
   line-height: 1.6;
+}
+
+.project-link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 18px;
+  padding: 8px 12px;
+  background-color: #fff5f9;
+  border: 1px solid #FFDEF8;
+  border-radius: 8px;
+  color: #d4868c;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover,
+.project-link:focus {
+  background-color: #d4868c;
+  color: #ffffff;
 }
 
 /* ===== SONGS SECTION ===== */
@@ -339,6 +369,7 @@ footer i {
   display: flex;          /* Place items in a row */
   justify-content: center;/* Center the menu */
   gap: 20px;              /* Space between items */
+  flex-wrap: wrap;        /* Allow links to wrap on smaller widths */
   padding: 12px 16px;     /* Space inside the nav */
 }
 
@@ -366,6 +397,10 @@ html {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
   .hero h1 {
     font-size: 2em;
   }
@@ -398,6 +433,7 @@ html {
 
   /* Make the menu a bit tighter on small screens */
   .top-nav ul {
+    justify-content: center;
     gap: 12px;
     padding: 10px 12px;
   }
@@ -405,6 +441,92 @@ html {
   .top-nav a {
     font-size: 0.95em;
     padding: 6px 8px;
+  }
+
+  .section-heading,
+  .songs-heading {
+    gap: 10px;
+  }
+
+  .section-heading i,
+  .songs-heading i {
+    font-size: 1.5em;
+  }
+
+  .songs-heading h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .about p {
+    font-size: 1em;
+  }
+
+  .song-card {
+    width: 140px;
+  }
+
+  .song-card img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 520px) {
+  section {
+    padding: 30px 14px;
+  }
+
+  .hero {
+    padding: 56px 14px;
+  }
+
+  .hero h1 {
+    font-size: 1.7em;
+  }
+
+  .tagline {
+    font-size: 1.05em;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .top-nav ul {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .top-nav a {
+    font-size: 0.88em;
+    padding: 5px 7px;
+  }
+
+  .section-heading,
+  .songs-heading {
+    flex-wrap: wrap;
+  }
+
+  .section-heading h2,
+  .songs-heading h2 {
+    font-size: 1.25em;
+    line-height: 1.3;
+  }
+
+  .projects-container,
+  .skills-container,
+  .songs-container {
+    gap: 16px;
+  }
+
+  .contact-links {
+    gap: 22px;
+  }
+
+  .contact-links a {
+    font-size: 2.1em;
   }
 }
 
